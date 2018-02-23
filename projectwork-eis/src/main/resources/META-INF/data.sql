@@ -2,10 +2,12 @@ INSERT INTO role(code, description)VALUES ('USER','simple user');
 INSERT INTO role(code, description)VALUES ('ADMIN','admin user');
 
 INSERT INTO userrole(username,role_code)VALUES ('giacompa','USER');
+INSERT INTO userrole(username,role_code)VALUES ('massimiliano','USER');
 INSERT INTO userrole(username,role_code)VALUES ('giacompa','ADMIN');
 INSERT INTO userrole(username,role_code)VALUES ('lugraci','USER');
 
 INSERT INTO security(username,password)values('giacompa','giacompa');
+INSERT INTO security(username,password)values('massimiliano','massimiliano');
 INSERT INTO security(username,password)values('lugraci','lugraci');
 
 INSERT INTO userx(username, address, city, postcode, email, timebirth) VALUES ('giacompa','via tommaso marcellini 5','Palermo','90135','giancarlo.compagno@eng.it','1976-09-08');

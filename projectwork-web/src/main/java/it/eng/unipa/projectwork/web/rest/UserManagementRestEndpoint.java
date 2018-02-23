@@ -35,7 +35,7 @@ public class UserManagementRestEndpoint {
 	@Path("/get")
 	@RolesAllowed(value="USER")
    public UserDTO get(@Context SecurityContext sc){
-		String username  = sc.getUserPrincipal().getName();
+		String username  = sc.getUserPrincipal().getName(); 
 		
 		UserDTO userDTO  =  ConverterUtils.convert(userService.getUser(username),UserDTO.class);
 		

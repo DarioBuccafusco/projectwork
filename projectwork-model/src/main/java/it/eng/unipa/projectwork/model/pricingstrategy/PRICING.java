@@ -27,12 +27,16 @@ public enum PRICING {
 			}
 			return curr;
 			*/
+			if(bids!=null && bids.size()>0) {
 			Bid bid = bids.stream().max(
 					(a,b)->{
 						return a.getPrice().compareTo(b.getPrice());
 					}).get();
 			System.out.println(bids.size()+" " + bid);
 			return bid;
+			}else {
+				return null;
+			}
 			/*
 			return Collections.max(bids,new Comparator<Bid>() {
 				public int compare(Bid o1, Bid o2) {
@@ -49,7 +53,11 @@ public enum PRICING {
 		
 		@Override
 		public Bid currentBid(List<Bid> bids) {
-			return bids.stream().min((a,b)->{return a.getPrice().compareTo(b.getPrice());}).get();
+			if(bids!=null && bids.size()>0) {
+				return bids.stream().min((a,b)->{return a.getPrice().compareTo(b.getPrice());}).get();
+			}else {
+				return null;
+			}
 		}
 	};
 	
